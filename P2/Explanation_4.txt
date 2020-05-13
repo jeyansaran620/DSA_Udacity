@@ -1,0 +1,32 @@
+Problem:
+ To sort the array having only '0' , '1' and '2'.
+ 
+ 
+ Code Design:
+  
+  *We start the mid from the first index and iterate to the last index.
+  
+  *We have start index at 0 and last index as the end index.
+  
+  *When value in mid is '0' ,swap values in mid and start then increment mid and start.
+  
+  *Or when value in mid is '1' then increment mid.
+  
+  *Or when value in mid is '2' ,swap values in mid and high then decrement high. 
+  
+  *When mid excedes end, the iteration breaks.
+  
+
+
+Efficiency:
+
+
+ Time Complexity:
+ 
+   This takes O(n) as we just iterate the array only once and the swapping takes constant time here.
+   
+   
+   
+   Space Complexity:
+   
+   As we are doing in-place sorting it takes Complexity of O(1), we just use Auxilary variables.

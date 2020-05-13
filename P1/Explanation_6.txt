@@ -1,0 +1,34 @@
+Problem:
+ Make Union and Intersection Sets of Two sets.
+ 
+Code Design:
+
+  *We are having Linked list class with Append, size and is_present functions.
+  
+  *When making a list into linked list we check for the presence of every node not to be present already as sets Does'nt have duplicates.
+  
+  *By iterating the list and checking the presence we append to to the linked list.
+  
+  *With Two linked list we call Union and in that we iterte over a list and add all its values.
+  
+  *With the second list we add values that are not already in the union.
+  
+  *In Intersection we iterate any of the list and check for the presence of each value in the other list,is so then add it to the intersection list.
+  
+  *Return the list set of values that are in both the lists.     
+  
+  
+Efficiency:
+ Time Complexity:
+   Union:
+   It takes O(n) to iterate the First list.
+   It takes O(n) to iterte the second list and in that,
+      we are checking its presence in the Union list that may take O(m+n-1) in worst case.
+      It takes O(n) to append it to the union list.
+   so as a whole it may take O(n*(m+n) for union.
+   
+   Intersection:
+   It takes O(n) to iterate the list and in that,
+      It takes O(m) to check the value's presence in another list.
+      It takes O(n) to append it to the intersection list.
+   so as a whole O(n*m) for intersection 

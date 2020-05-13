@@ -1,0 +1,30 @@
+Problem:
+
+ To Rearrange array element to get two numbers who sum is the largest.
+ 
+ 
+Code Design:
+
+ *We are sorting the given array using the merge sort.
+ 
+ *We iterate the sorted array in a reverse order.
+ 
+ *Add the element alternatively to first and second number till the end.
+ 
+ *Return the first and second values as integers.
+ 
+ 
+Efficiency:
+ 
+ 
+ Time Complexity:
+  
+  Merge Sort takes O(n log n) time Complexity.
+  
+  Then we take O(n) as we iterate through the sorted list.
+  
+  
+  
+  Space Complexity:
+  
+   Merge sort takes O(n) space and we just use some more auxilaries in calculations.

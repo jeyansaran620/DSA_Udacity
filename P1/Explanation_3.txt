@@ -1,0 +1,76 @@
+Problem:
+  Huffman Tree Encoding and decoding.
+  
+Code Design:
+ 
+ *First we are having a Huffman_Tree class with head to Nodes and function to print path from head to node.
+ 
+ *In Encoding, we are having a values dict to store characters with frequencies and nodes list to have all the created nodes
+ 
+ *We iterate the data and Update the values in the dict.
+ 
+ *We copy a the dict for future reference and sort the dict by using sorted function.
+ 
+ *With a while loop we take the two least values in the dict and make them nodes if not del those from the dict using pop.
+ 
+ *Create a new node with the sum of the frequencies of the two nodes and make them its children.
+ 
+ *Make changes in the Huffman tree to have correct head value and add the node to the dict.
+ 
+ *Repeat the loop until there is only one key,value pair in the dict.
+ 
+ *By these we are having a Updated Huffman tree an with the help of that update the dict copy with the Huffman codes using the function path from head to node that return code with '0's and '1's.
+ 
+ *Iterate the given Data and make that into encoded data using the updated dict and return it with the tree. 
+ 
+ *In Decoding have a empty string, and iterate over the given encoded data having head of the tree as the current node.
+ 
+ *If the value is '0' then make left of current as current if it is '1' then make right of current as current.
+ 
+ *When current is a leaf then add its character to the decoded string and make head of the tree as current.
+ 
+
+
+ Efficiency:
+ 
+  Time Complexity:
+  
+   Encoding:
+   
+    It takes O(n) for the iteration of the given data to update the dict.
+    
+    It takes O(n) to copy the dict.
+    
+    It takes O(n log n) for sorting the dict with the sorted function (same as the min-heap operations).
+    
+    It takes (n-1) iterations in the while loop as we exit when there is only one element.
+       It takes O(2n) for poping the least two values in worst cases.
+       It takes O(1) for making new Node and adding to to the tree.
+       It takes O(n log n) for sorting the dict with the sorted function.
+    As overall it takes a time complexity of O(n(n log n)) in the while loop.
+       
+    It takes O(n) to iterate the copy of the old dict.
+        It takes O(n) to find the path from the node to the root and O(n) to reverse it. 
+        it takes O(1) to update the dict.
+    As overall this iteration takes O(n^2).
+    
+    Then it takes O(n) to make the encoded data for the given data using the updated dict.
+    
+    As an overall Encoding takes a time complexity of O(n^2(log n)).
+    
+    Decoding:
+    
+     It takes O(n) for the iteration with the data and in that,
+         We are just making changes in the current node with O(1) complexity.
+    
+    So decoding just takes a time complexity of O(n). 
+    
+    
+  Space Complexity:
+   
+    We are having two dict of O(n) and a list O(n) in the encoding so O(3n) => O(n).
+    
+    We are having 2n-1 nodes in the Huffman tree with space complexity of O(2n - 1).
+    
+    Some auxilary variables for the calculation.
+    

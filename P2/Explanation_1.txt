@@ -1,0 +1,33 @@
+Problem:
+  To find the square root of an element.
+  
+  
+Code Design:
+
+  *Here we are just iterating from 1 to n with the variable i.
+ 
+  *If we found the i square larger than the given number then we return i-1.
+
+
+Efficiency:
+
+
+ Time Complexity:
+ 
+   we will take less than O(log n) as the value will be found within log n iterations.
+   
+   For example:
+      n    iterations
+      0     1
+      1     2
+      2     2
+      3     2
+      4     3
+      16    5
+      25    6
+
+
+ Space Complexity:
+ 
+  We are taking only one Auxilary variable using O(1) space.
+   

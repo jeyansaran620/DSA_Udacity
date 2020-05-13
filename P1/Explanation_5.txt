@@ -1,0 +1,27 @@
+Problem:
+  block chain implementation with linked list.
+  
+Code Design:
+ 
+  *We are having block class with timestamp,hash of previous block,data,current hash and next variables with function hash and get_utc_time.
+  
+  *In the init Constructor of Block it takes Data and Time stamp with Prev Block's hash, It uses its self hash function make its hash and store within it. 
+  
+  *We are having a Block_Chain with head and tail also with add block and print bloack chain function.
+  
+  *Add block function creates a block and adds to the tail of the chain.
+  
+  *Print Block chain Prints all the Blocks data Prev hash and their current Hash.
+  
+
+Efficiency:
+
+ Time Complexity:
+ 
+  It takes O(1) to make a Block and store it into the Block_chain.
+  
+  It takes O(n) To print the values of the Block Chain.
+  
+  Space Complexity:
+  
+  It takes O(n) blocks and O(1) for the head. 

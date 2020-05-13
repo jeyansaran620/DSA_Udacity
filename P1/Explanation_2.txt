@@ -1,0 +1,50 @@
+Problem:
+ To find Files of c extension in the directory.
+ 
+ 
+Code Design:
+
+ * In the find_files function we take in the suffix(i.e 'c') and the path to be explored.
+ 
+ * First we get all the elements using os.listdir(path) and store it in a list.
+ 
+ * With that list we explore for the file with the extension and store them with path separately in a list.
+ 
+ * With here we call the same function for each sub-folders to get the files with the extension inside them.
+ 
+ * Return the Comple list of files with the extension.
+ 
+ 
+ Efficiency:
+ 
+ 
+ Time Complexity:
+
+  os.listdir(path) will list all the files and folders in a given path. It will take O(e) if there are e elements in the folder.  
+
+  Then we check for the files with extension and folders that takes O(e)
+  
+  If we have g sub folders then we shold consider every sub folder to be traversed. 
+     
+  For recursion, if k is the number of directories (branches) at each level in depth, then the recursion will take total time complexity of O((k^depth) * e).
+
+
+ Space Complexity:
+
+ Input Space
+
+ For  suffix - O(1)
+
+ For path - O(1)
+
+ path_elements + path_files + path_folders => O(e + f + g) => O(e)
+
+ Auxiliary Space
+
+ As Recursion uses "call stack"
+
+ Therefore O(depth) space is required in the call stack.
+
+ Total Space Complexity => Input Space + Auxiliary Space => O(e + depth)
+ 
+ 

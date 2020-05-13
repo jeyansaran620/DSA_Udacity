@@ -1,0 +1,28 @@
+Problem:
+
+ To implement HTTPRouter using a Trie.
+ 
+ 
+Code Design: (Sorry i have modified the given template, because this seems easy for me.)
+
+ *First we Define RouteTrieNode with handler variable and children(initially empty).
+ 
+ *Then we define Router with root, root and error handler.
+ 
+ *In add handler function we get the path and split with '/', add each to a Node in the Trie and then set the handler.
+ 
+ *In lookup function we get the path and split it with '/', iterate with each Node and return the last iterated node handler.
+ 
+ *When there is no such node in the iteration, return error handler.
+ 
+ 
+Efficiency:
+ 
+ Time Complexity:
+ 
+   It takes O(n) for a path with n divisions.
+   
+   
+ Space Complexity:
+ 
+  It takes O(n) for n sub pages.

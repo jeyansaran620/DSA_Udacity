@@ -1,0 +1,36 @@
+Problem:
+ To have a Auto Complete function with Trie implementation.
+ 
+ 
+Code Design:
+
+ *We start with defining the Trie Node having is_word condition and their children(initially Empty).
+ 
+ *We define the Trie with root and function to add word, find node and find suffix.
+ 
+ *To add a word we iterate the characters in the word and check for their existence and add them within one by one, atlast  setting is_word as True.
+ 
+ *To find a node with prefix we iterate the prefix and check for each character when anything is not found return False or return the last iterated node in the trie.
+ 
+ *To Find the suffix with prefix, we find the node with the prefix and recursively call for thier children to find the words, whena word completes it is appended to the wordlist.
+ 
+ 
+Efficiency:
+
+ Time Complexity:
+  
+   To add a word it takes O(n) as n is the size of the word.
+   
+   To find a node with prefix, it takes O(n) as n is the size of the prefix.
+   
+   To find the suffix for a prefix, it first takes size of prefix to find the node,
+   
+   And it takes O(n*depth) when we have n children and a depth of multiple character within each.
+   
+   
+ Space Complexity:
+ 
+  It takes O(n) for a word of n characters in worst cases(totally different words).
+  
+  It takes Auxilary values for suffix stacks.
+   

@@ -1,0 +1,39 @@
+Problem:
+
+  To Search an element from rotated sorted array.
+  
+  
+Code Design:
+
+ *We are finding the mid index.
+ 
+ *When the value is in the mid index return mid.
+ 
+ *When the value in the mid is larger than the first value then compare the given input with the values in the start and mid.
+
+ *If the input is between the value in the start and the value in the mid then recursively call with this limit.
+
+ *Else call from the mid to the end.
+ 
+ *When the value in the mid is smaller than the first element then compare with the input.
+ 
+ *If the input is between the value in the end and the value in the mid then recursively call with this limit.
+ 
+ *Else call from the start to the mid.
+
+
+Efficiency:
+
+
+ Time Complexity:
+   
+   This will take the time complexity of O(log n).
+   
+   As we are reducing n/2 step by step.
+
+
+ Space Complexity:
+   
+    This wil just take O(1) space as we just using some Auxilary variables.
+    
+    This takes some stack call as we are implementing recursion.

@@ -1,0 +1,28 @@
+problem:
+ To find min and max values of an unsorted array.
+ 
+ 
+Code Design:
+
+ *We are iterating the array in pairs(moving 2 each step).
+ 
+ *When first value is larger we check with large else with small and update.
+ 
+ *When second value is larger we check with large else with small and update.
+ 
+ *By the end of the iteration we return the small and large values.
+ 
+ 
+ 
+Efficiency:
+
+ Time Complexity:
+  
+  It takes O(n) as we are iterating only once.
+  
+  
+ Space Complexity:
+ 
+  It only takes two auxilary variables - O(1).
+  
+  

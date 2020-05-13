@@ -1,0 +1,56 @@
+Task 0
+Time Complexity - O(1) as it only prints the first and last values in the data sets.
+Space Complexity - O(n) for making the datasets as lists.
+
+Task 1
+Time Complexity - O(n) 
+O(2n) for iterating the two list => O(n) and
+O(1) for adding values in the set 
+O(1) for printing its length
+as a total we can tell this as O(n)
+
+Space Complexity -O(n)=> O(2n) => O(n) for making the datasets as lists and O(n) for the new list of distinct numbers.
+
+
+Task 2
+Time Complexity - O(n^2)
+ 
+ O(n) for iterating the list
+    O(1) for checking whether the element already exists or not exists in the dict 
+    O(n) for adding them to the dict in worst cases.
+ so O(n^2)
+ this is done for both the list so O(2(n^2)) => O(n^2)
+O(n) for iterating into dict and finding the highest value.
+overall this problem takes a time complexity of O(n^2) in the worst case.
+
+Space Complexity - O(n) as we are having a dict of distinct numbers having calls.
+
+
+Task 3
+Time Complexity - O(n^2) 
+ O(n) for iterating the calls list
+    O(string length) for split operations that is negligible
+    O(n) for adding elements to sets in worst case 
+ so this takes O(n^2) as a whole
+ O(n logn) for sorting the set worst case
+ O(n) for iterating the sorted set to print codes
+ O(1) for printing percentage
+ 
+Space Complexity - O(n) as we are having a codes dict
+
+
+Task 4
+Time Complexity - O(n^2) 
+ O(n) for iterating the sets.
+    O(n) for adding them into the sets in worst cases.
+ this happens twice so O(2(n^2)) => O(n^2)
+ 
+ O(n) for iterating the set(non tele-marketers) 
+   O(n) for checking the elements presence in worst cases.
+   O(n) for removing them from the set in worst cases.
+ so this takes O(n^2) as a whole.
+ 
+ O(n logn) for sorting the set worst case.
+ O(n) for iterating the sorted set to print codes.
+ 
+Space Complexity - O(n) as we are having two lists named messagers and numbers. 
